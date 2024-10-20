@@ -11,7 +11,7 @@
 
 <header class="header">
     <div class="header-container">
-        <a class="brand" href="/">Analyzer</a>
+        <a class="brand" href="/ugc-web-intro/">Analyzer</a>
         
         <div class="container">
             <button id="toggle-theme" on:click={toggleTheme}>
