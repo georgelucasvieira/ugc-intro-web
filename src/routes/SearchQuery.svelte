@@ -83,7 +83,7 @@
       </footer>
       
       {#if canSearch}
-        <button id="search-button" transition:fly={{ y: 200, duration: 700 }} on:click|preventDefault={() => window.location.href = '/ugc-intro-web/search-query/scanning'}>
+        <button id="search-button" transition:fly={{ y: 200, duration: 700 }} on:click|preventDefault={() => window.location.href = '/search-query/scanning'}>
           Analyze
         </button>
       {/if}

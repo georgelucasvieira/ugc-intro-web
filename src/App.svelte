@@ -9,7 +9,7 @@ import { Router, Route } from "svelte-routing";
 
 </script>
 
-<Router basepath={"/ugc-intro-web"}>
+<Router >
 	<Route path="/"><svelte:component this={Home} /></Route>
 	<Route path="/home"><svelte:component this={Home} /></Route>
 	<Route path="/search-query"><svelte:component this={SearchQuery} /></Route>
