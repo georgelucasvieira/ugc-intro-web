@@ -6,11 +6,10 @@ import SearchLink from './routes/SearchLink.svelte';
 import SearchQuery from './routes/SearchQuery.svelte';
 import { Router, Route } from "svelte-routing";
 
-export let url: string = "";
 
 </script>
 
-<Router {url}>
+<Router basepath={"/ugc-intro-web"}>
 	<Route path="/"><svelte:component this={Home} /></Route>
 	<Route path="/home"><svelte:component this={Home} /></Route>
 	<Route path="/search-query"><svelte:component this={SearchQuery} /></Route>
