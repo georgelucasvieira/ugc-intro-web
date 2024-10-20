@@ -19,7 +19,7 @@
       </div>
     
   
-      <button on:click|preventDefault={() => window.location.href = selectedOption === 'search-query' ? '/ugc-web-intro/search-query' : '/ugc-web-intro/search-link'}>
+      <button on:click|preventDefault={() => window.location.href = selectedOption === 'search-query' ? '/ugc-intro-web/search-query' : '/ugc-intro-web/search-link'}>
         Search
       </button>
   
