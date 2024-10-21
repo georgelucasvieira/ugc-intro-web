@@ -1,0 +1,18 @@
+{
+	"/": [
+		"src/routes/+layout.js",
+		"src/routes/+layout.js"
+	],
+	"/home": [
+		"src/routes/+layout.js"
+	],
+	"/search-link": [
+		"src/routes/+layout.js"
+	],
+	"/search-query": [
+		"src/routes/+layout.js"
+	],
+	"/search-query/scanning": [
+		"src/routes/+layout.js"
+	]
+}
