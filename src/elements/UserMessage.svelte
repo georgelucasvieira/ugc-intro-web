@@ -17,7 +17,7 @@
 
     .user-message-box{
         max-width: 300px;
-        padding: 0px 10px;
+        padding: 10px 20px;
         border-radius: 10px;
         background-color: #3b3b3b;
         overflow-wrap: break-word;

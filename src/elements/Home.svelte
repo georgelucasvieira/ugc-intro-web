@@ -40,6 +40,8 @@
       flex-direction: column;
       align-items: center;
       text-align: start;
+      gap: 20px;
+      margin-top: 6rem;
     }
   
     .form-container{

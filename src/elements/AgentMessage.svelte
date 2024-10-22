@@ -2,21 +2,21 @@
     import Typewriter from 'svelte-typewriter'
     import { createEventDispatcher } from 'svelte';
 
-    let writerInterval = [20, 100, 50, 20, 25, 18, 14, 50, 100, 20, 15, 10, 5, 5, 5, 5, 5,5, 5,5, 5,5, 5,5, 5,5, 5,5, 5,5, 5,5, 5,5, 5,5, 1,1, 1,1, 1,1, 1,1, 1,1, 1,1, 1,100, 100,50,1, 1,1, 1,1, 1,1, 1,1, 1,1, 1,1, 1,1, 1,1, 1,1, 1,1, 1,1, 1,1, 1,1, 1,1, 1,1, 1,1, 1,1, 1,1, 1,1, 1,50, 25,5,5] as unknown as number;
+    let writerInterval = [100,20,15,2,1,0,1,0,0,0,0,0,0,0,0,0,1,1,1,1,2,5,1,3,1,2,1,0,0,0,0,0,0,0,1,0,1] as unknown as number;
     export let message = "";
+    export let index: number = 0;
     const dispatch = createEventDispatcher();
 
     function finished(): void{
-        dispatch("finished", true)
+        dispatch("finished", index)
     }
 
 </script>
 
 <div class="agent-message-container">
     <div class="agent-message-box">
-            <Typewriter interval={writerInterval} delay={400} on:done={finished}>
+            <Typewriter interval={writerInterval} on:done={finished}>
                 <p>{message}</p>
-                <div class="content-table">ToDo:Table</div>
             </Typewriter>
 
     </div>
@@ -30,22 +30,9 @@
     }
 
     .agent-message-box{
-        max-width: 300px;
-        padding: 0px 10px;
         border-radius: 10px;
-        background-color: var(--element-color);
         overflow-wrap: break-word;
         text-align: start;
     }
 
-    .content-table{
-        height: 200px;
-        width: 300px;
-        background-color: black;
-        display:none;
-        margin-bottom: 20px;
-        text-align: center;
-        justify-content: center;
-        align-items: center;
-    }
 </style>
