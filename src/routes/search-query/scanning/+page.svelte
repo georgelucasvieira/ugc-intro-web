@@ -68,13 +68,12 @@
             <Circle3 size="60" unit="px" duration="1.5s"/>
         </div>
         <h2 id="scanning-text">Scanning database & queueing queries...</h2>
-    </section>
-
-    {#if showResults}
+        {#if showResults}
         <button id="search-button" transition:fly={{ y: 200, duration: 700 }} on:click|preventDefault={() => window.location.href = 'https://analyzer.leading.nl/app/crawl-settings'}>
             View Results
         </button>
-    {/if}
+        {/if}
+    </section>
 </main>
 
 <style>
@@ -82,6 +81,8 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 1rem;
+        margin-top: 13vh;
     }
     
     #results{

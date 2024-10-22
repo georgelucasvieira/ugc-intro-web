@@ -38,6 +38,9 @@
 
     function chatFinished(event: CustomEvent):void{
       currentMessageIndex = event.detail as number;
+      if (currentMessageIndex > 5){
+        canSearch = true;
+      }
     }
 
     function incrementIndex():void{
@@ -189,7 +192,7 @@
             
             {#if currentMessageIndex > 4}
               <AgentMessage
-              index={5}
+              index={6}
               message={`Would you like to add these queries to initiate a full database search? On what platform would you like to conduct the search: Facebook, Instagram, TikTok, Twitter (X), Pinterest, YouTube, Reddit, LinkedIn, or the Web?`} 
               on:finished={chatFinished} />
             {/if}        
@@ -207,7 +210,11 @@
       
       {#if canSearch}
         <button id="search-button" transition:fly={{ y: 200, duration: 700 }} on:click|preventDefault={() => window.location.href = '/search-query/scanning'}>
-          Analyze
+          <p>Analyze</p>
+          <svg xmlns="http://www.w3.org/2000/svg" width="15px" height="15px" viewBox="0 0 16 16" fill="none">
+            <path d="M10 3V6H4L4 10H10L10 13L11 13L16 8L11 3L10 3Z" fill="#213547"/>
+            <path d="M0 2L1.38281e-06 14H2L2 2L0 2Z" fill="#213547"/>
+            </svg>
         </button>
       {/if}
   {/if}
@@ -258,6 +265,10 @@
     right: 30%;
     background-color: white;
     color: #213547;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
   }
 
   .footer-background{
