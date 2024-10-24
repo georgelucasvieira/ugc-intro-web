@@ -212,8 +212,8 @@
         <button id="search-button" transition:fly={{ y: 200, duration: 700 }} on:click|preventDefault={() => window.location.href = '/search-query/scanning'}>
           <p>Analyze</p>
           <svg xmlns="http://www.w3.org/2000/svg" width="15px" height="15px" viewBox="0 0 16 16" fill="none">
-            <path d="M10 3V6H4L4 10H10L10 13L11 13L16 8L11 3L10 3Z" fill="#213547"/>
-            <path d="M0 2L1.38281e-06 14H2L2 2L0 2Z" fill="#213547"/>
+            <path d="M10 3V6H4L4 10H10L10 13L11 13L16 8L11 3L10 3Z" fill="#ffffff"/>
+            <path d="M0 2L1.38281e-06 14H2L2 2L0 2Z" fill="#ffffff"/>
             </svg>
         </button>
       {/if}
@@ -263,8 +263,8 @@
     position:fixed;
     bottom:15vh;
     right: 30%;
-    background-color: white;
-    color: #213547;
+    background-color: var(--button-color);
+    color: #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;

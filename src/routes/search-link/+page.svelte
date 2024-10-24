@@ -35,6 +35,10 @@
       agentResponsesCounter += 1;
     }
 
+    function chatFinished(node: HTMLDivElement):void{
+        canSearch = true;
+    }
+
     function incrementIndex():void{
       currentMessageIndex += 1
     }
@@ -313,7 +317,7 @@
             {/if}
 
             {#if currentMessageIndex > 10}
-              <div>
+              <div use:chatFinished>
                 <p><b>Global News</b></p>
                 <a href="https://globalnews.ca/news/10812024/canada-india-row-nijjar-explained/">Canada-India tensions: What’s happened and how did we get here?  | Globalnews.ca</a>
                 <p>Canadian officials named India’s Home Minister Amit Shah as having “authorized the intelligence-gathering missions and attacks on Sikh separatists” in Canada, U.S. media reported.</p>
@@ -346,8 +350,8 @@
       </footer>
       
       {#if canSearch}
-        <button id="search-button" transition:fly={{ y: 200, duration: 700 }} on:click|preventDefault={() => window.location.href = '/search-query/scanning'}>
-          Analyze
+        <button id="analytics-button" transition:fly={{ y: 200, duration: 700 }} on:click|preventDefault={() => window.location.href = 'https://analyzer.leading.nl/app/posts/5'}>
+          <p>Detailed Analytics</p>
         </button>
       {/if}
   {/if}
@@ -397,12 +401,16 @@
     margin-bottom: 30px;
   }
   
-  #search-button{
+  #analytics-button{
     position:fixed;
     bottom:15vh;
     right: 30%;
-    background-color: white;
-    color: #213547;
+    background-color: var(--button-color);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
   }
 
   .footer-background{

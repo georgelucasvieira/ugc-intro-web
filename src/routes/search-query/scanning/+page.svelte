@@ -69,9 +69,15 @@
         </div>
         <h2 id="scanning-text">Scanning database & queueing queries...</h2>
         {#if showResults}
-        <button id="search-button" transition:fly={{ y: 200, duration: 700 }} on:click|preventDefault={() => window.location.href = 'https://analyzer.leading.nl/app/crawl-settings'}>
-            View Results
-        </button>
+        <div id="buttons">
+            <button transition:fly={{ y: 200, duration: 700 }} on:click|preventDefault={() => window.location.href = 'https://analyzer.leading.nl/app/crawl-settings/1/edit'}>
+                Review Query
+            </button>
+            <button transition:fly={{ y: 200, duration: 700 }} on:click|preventDefault={() => window.location.href = 'https://analyzer.leading.nl/app/posts?tableSortColumn=reach&tableSortDirection=desc'}>
+                View Results
+            </button>
+        </div>
+
         {/if}
     </section>
 </main>
@@ -87,6 +93,11 @@
     
     #results{
         color: var(--button-color);
+    }
+    
+    #buttons{
+        display: flex;
+        gap: 15px;
     }
 
 
