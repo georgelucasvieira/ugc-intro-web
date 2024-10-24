@@ -61,7 +61,7 @@
         height: 3.75rem;
         z-index: 50;
         background-color: var(--navbar-color);
-        border-bottom: 1px solid rgb(116, 116, 116);
+        border-bottom: 1px solid var(--header-bottom-line);
     }
     
     .header-container {

@@ -3,12 +3,14 @@
   line-height: 1.5;
   font-weight: 400;
 
-  --background-color: #f9f9f9;
+  --background-color: #eeeeee;
   --element-color: #c8c8c8;
   --text-color: #213547;
   --button-color:#f59e0b;
-  --navbar-color:#f9f9f9;
+
   --header-contrast-color: black;
+  --navbar-color:#f9f9f9;
+  --header-bottom-line:#c4c4c4;
 
   color-scheme: light dark;
   color: var(--text-color);
@@ -85,6 +87,7 @@ button:focus-visible {
   --element-color:#3b3b3b;
   --navbar-color:black;
   --header-contrast-color: white;
+  --header-bottom-line: black;
 }
 
 :root.dark button {
