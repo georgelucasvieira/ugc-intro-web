@@ -71,7 +71,7 @@
       #upload-btn {
         padding: 0;
         background-color: transparent;
-        color: white;
+        color: var(--text-color);
         border: none;
         cursor: pointer;
         border-radius: 5px;
@@ -92,14 +92,20 @@
         height: 100%;
         width: 50px;
         margin-left: 10px;
+        background-color: var(--button-color);
       }
     
       #search-input {
         padding: 0 10px;
-        border: 1px solid #ccc;
+        border: 1px solid var(--text-color);
         border-radius: 5px;
         width: 30vw;
         height: 100%;
+        background-color: var(--element-color);
+        color: var(--text-color);
+      }
+      #search-input::placeholder {
+        padding-left: 10px;
       }
     
       .search-container {

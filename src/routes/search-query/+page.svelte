@@ -211,10 +211,6 @@
       {#if canSearch}
         <button id="search-button" transition:fly={{ y: 200, duration: 700 }} on:click|preventDefault={() => window.location.href = '/search-query/scanning'}>
           <p>Analyze</p>
-          <svg xmlns="http://www.w3.org/2000/svg" width="15px" height="15px" viewBox="0 0 16 16" fill="none">
-            <path d="M10 3V6H4L4 10H10L10 13L11 13L16 8L11 3L10 3Z" fill="#ffffff"/>
-            <path d="M0 2L1.38281e-06 14H2L2 2L0 2Z" fill="#ffffff"/>
-            </svg>
         </button>
       {/if}
   {/if}
@@ -282,11 +278,8 @@
   }
 
   table {
-    --tw-border-spacing-x: 0px;
-    --tw-border-spacing-y: 0px;
     border-collapse: separate;
-    border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
-    border-color: inherit;
+    border-spacing: 0;
     text-indent: 0;
     margin-bottom: .25rem;
     margin-top: .25rem;
@@ -294,39 +287,42 @@
     font-size: .875em;
     line-height: 1.7142857;
     table-layout: auto;
-  }
+}
 
-  table thead > tr{
-    background-color: #383838;
-    border-radius: 20px;
-  }
+th, td {
+  border-bottom: 1px solid var(--text-color); /* Bottom border */
+  border-right: 1px solid var(--text-color); /* Right border */
+  padding: .25rem .75rem;
+}
 
-  table thead tr > th{
-    border: 1px solid #4a4a4ae6;
-    padding: .25rem .75rem;
-  }
+table tr th {
+  border-top: 1px solid var(--text-color);
+}
 
-  table thead tr > th:first-child{
-    border-top-left-radius: 0.375rem;
-  }
+table tr td:first-child, 
+table tr th:first-child {
+  border-left: 1px solid var(--text-color);
+}
 
-  table thead tr > th:last-child{
-    border-top-right-radius: 0.375rem;
-  }
+table thead > tr {
+    background-color: var(--element-color);
+}
 
-  table tbody tr > td{
-    border: 1px solid #4a4a4ae6;
-    padding: .25rem .75rem;
-  }
+table thead tr > th:first-child {
+    border-top-left-radius: 0.375rem; /* Canto superior esquerdo arredondado */
+}
 
-  table tbody tr:last-child > td:first-child{
-    border-bottom-left-radius: 0.375rem;
-  }
+table thead tr > th:last-child {
+    border-top-right-radius: 0.375rem; /* Canto superior direito arredondado */
+}
 
-  table tbody tr:last-child > td:last-child{
-    border-bottom-right-radius: 0.375rem;
-  }
+table tbody tr:last-child > td:first-child {
+    border-bottom-left-radius: 0.375rem; /* Canto inferior esquerdo arredondado */
+}
 
+table tbody tr:last-child > td:last-child {
+    border-bottom-right-radius: 0.375rem; /* Canto inferior direito arredondado */
+}
 
 </style>
   

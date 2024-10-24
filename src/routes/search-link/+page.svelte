@@ -350,7 +350,7 @@
       </footer>
       
       {#if canSearch}
-        <button id="analytics-button" transition:fly={{ y: 200, duration: 700 }} on:click|preventDefault={() => window.location.href = 'https://analyzer.leading.nl/app/posts/5'}>
+        <button id="analytics-button" transition:fly={{ y: 200, duration: 700 }} on:click|preventDefault={() => window.open('https://analyzer.leading.nl/app/posts/5', "_blank") }>
           <p>Detailed Analytics</p>
         </button>
       {/if}

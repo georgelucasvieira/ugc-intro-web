@@ -70,10 +70,10 @@
         <h2 id="scanning-text">Scanning database & queueing queries...</h2>
         {#if showResults}
         <div id="buttons">
-            <button transition:fly={{ y: 200, duration: 700 }} on:click|preventDefault={() => window.location.href = 'https://analyzer.leading.nl/app/crawl-settings/1/edit'}>
+            <button transition:fly={{ y: 200, duration: 700 }} on:click|preventDefault={() => window.open('https://analyzer.leading.nl/app/crawl-settings/1/edit', '_blank')}>
                 Review Query
             </button>
-            <button transition:fly={{ y: 200, duration: 700 }} on:click|preventDefault={() => window.location.href = 'https://analyzer.leading.nl/app/posts?tableSortColumn=reach&tableSortDirection=desc'}>
+            <button transition:fly={{ y: 200, duration: 700 }} on:click|preventDefault={() => window.open('https://analyzer.leading.nl/app/posts?tableSortColumn=reach&tableSortDirection=desc', '_blank')}>
                 View Results
             </button>
         </div>

@@ -4,9 +4,11 @@
   font-weight: 400;
 
   --background-color: #f9f9f9;
-  --element-color: #c7c7c7;
+  --element-color: #c8c8c8;
   --text-color: #213547;
   --button-color:#f59e0b;
+  --navbar-color:#f9f9f9;
+  --header-contrast-color: black;
 
   color-scheme: light dark;
   color: var(--text-color);
@@ -63,8 +65,8 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: var(--element-color);
-  color: var(--button-color);
+  background-color: var(--button-color);
+  color: white;
   cursor: pointer;
   transition: border-color 0.25s;
 }
@@ -80,7 +82,9 @@ button:focus-visible {
   color: rgba(255, 255, 255, 0.87);
   --background-color: #242424;
   --text-color:#f9f9f9;
-  --element-color:#1a1a1a;
+  --element-color:#3b3b3b;
+  --navbar-color:black;
+  --header-contrast-color: white;
 }
 
 :root.dark button {

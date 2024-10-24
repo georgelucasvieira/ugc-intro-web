@@ -19,7 +19,7 @@
         max-width: 300px;
         padding: 10px 20px;
         border-radius: 10px;
-        background-color: #3b3b3b;
+        background-color: var(--element-color);
         overflow-wrap: break-word;
         text-align: start;
     }

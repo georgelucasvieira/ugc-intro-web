@@ -1,10 +1,13 @@
 <script lang="ts">
-    let  darkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;  
+    let  darkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    let currentScheme = getComputedStyle(document.documentElement).getPropertyValue('color-scheme').trim();
+  
     document.documentElement.classList.toggle('dark', darkMode);
 
     const toggleTheme = () => {
           darkMode = !darkMode;
           document.documentElement.classList.toggle('dark', darkMode);
+          document.documentElement.style.setProperty('color-scheme', currentScheme === 'dark' ? 'light' : 'dark');
     };    
 
 </script>
@@ -57,8 +60,8 @@
         width: 100%;
         height: 3.75rem;
         z-index: 50;
-        background-color: black;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        background-color: var(--navbar-color);
+        border-bottom: 1px solid rgb(116, 116, 116);
     }
     
     .header-container {
@@ -73,7 +76,6 @@
     .brand {
         font-weight: 700;
         justify-self: start;
-        color: #f9f9f9;
         font-size: 1.25rem;
     }
     
@@ -86,8 +88,11 @@
 
     #toggle-theme {
         background-color: #52525266;
-        color: white;;
+        color: var(--header-contrast-color);
     }
 
+  a {
+    color: var(--header-contrast-color);
+  }
 
 </style>
