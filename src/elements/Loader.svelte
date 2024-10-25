@@ -54,7 +54,7 @@
             observedChild = loader?.parentElement?.children[1] as HTMLElement;
 
             if (observedChild) {
-                observedChild.style.display = "none";
+                // observedChild.style.display = "none";
                 observer.observe(observedChild, {
                     childList: true,  
                     attributes: false,     
