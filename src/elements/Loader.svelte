@@ -18,11 +18,17 @@
                         if (node instanceof HTMLElement) {
                             let target = node.querySelector(targetSelector);
                             if (target){
-                                setTimeout(() => {
-                                    removeLoader();
-                                    observedChild.style.display = "block";
-                                    observer.disconnect();
-                                }, 2000);
+                                if (target instanceof HTMLIFrameElement){
+                                    target.onload = function(){
+                                        observedChild.style.display = "block";
+                                        removeLoader();
+                                        observer.disconnect();
+                                    }
+                                }  
+                            } else{
+                                observedChild.style.display = "block";
+                                removeLoader();
+                                observer.disconnect();
                             }
                         }
                     });
@@ -76,10 +82,11 @@
         background-color: var(--element-color);
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: start;
         align-items: center;
         opacity: 0;
         animation: fadeIn 0.5s ease forwards;
+        padding-top: 2rem;
     }
 
     @keyframes fadeIn {
