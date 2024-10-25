@@ -20,7 +20,7 @@
                             if (target){
                                 setTimeout(() => {
                                     removeLoader();
-                                    observedChild.style.visibility = "visible";
+                                    observedChild.style.display = "block";
                                     observer.disconnect();
                                 }, 2000);
                             }
@@ -48,7 +48,7 @@
             observedChild = loader?.parentElement?.children[1] as HTMLElement;
 
             if (observedChild) {
-                observedChild.style.visibility = "hidden";
+                observedChild.style.display = "none";
                 observer.observe(observedChild, {
                     childList: true,  
                     attributes: false,     
