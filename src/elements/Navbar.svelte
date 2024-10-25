@@ -54,7 +54,7 @@
 <style>
     .header {
         position: fixed;
-        padding: 1rem;
+        padding: 1rem 0;
         top: 0;
         left: 0;
         width: 100%;
@@ -66,7 +66,7 @@
     
     .header-container {
         height: 100%;
-        max-width: 95%;
+        width: 90%;
         margin: 0 auto;
         display: flex;
         align-items: center;
@@ -89,6 +89,7 @@
     #toggle-theme {
         background-color: #52525266;
         color: var(--header-contrast-color);
+        padding: 0.3em 0.6em;
     }
 
   a {
