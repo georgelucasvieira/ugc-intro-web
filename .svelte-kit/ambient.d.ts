@@ -47,7 +47,6 @@ declare module '$env/static/private' {
 	export const LESSOPEN: string;
 	export const LOGNAME: string;
 	export const LS_COLORS: string;
-	export const MOTD_SHOWN: string;
 	export const NAME: string;
 	export const NODE: string;
 	export const PATH: string;
@@ -169,7 +168,6 @@ declare module '$env/dynamic/private' {
 		LESSOPEN: string;
 		LOGNAME: string;
 		LS_COLORS: string;
-		MOTD_SHOWN: string;
 		NAME: string;
 		NODE: string;
 		PATH: string;
