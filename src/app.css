@@ -7,6 +7,7 @@
   --element-color: #c8c8c8;
   --text-color: #213547;
   --button-color:#f59e0b;
+  --load-spinner-color:black;
 
   --header-contrast-color: black;
   --navbar-color:#f9f9f9;
@@ -88,6 +89,7 @@ button:focus-visible {
   --navbar-color:black;
   --header-contrast-color: white;
   --header-bottom-line: black;
+  --load-spinner-color:#c4c4c4;
 }
 
 :root.dark button {

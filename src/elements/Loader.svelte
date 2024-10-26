@@ -75,7 +75,7 @@
 </script>
 
 <div id="loader" bind:this={loader} use:observeDiv in:fade={{ duration: 500 }}>
-    <Circle color="#c4c4c4" size="15" unit="px"/>
+    <Circle color="var(--load-spinner-color)" size="15" unit="px"/>
 </div>
 <slot></slot>
 
