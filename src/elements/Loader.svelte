@@ -75,7 +75,7 @@
 </script>
 
 <div id="loader" bind:this={loader} use:observeDiv in:fade={{ duration: 500 }}>
-    <Circle color="#c4c4c4" size="30" unit="px"/>
+    <Circle color="#c4c4c4" size="15" unit="px"/>
 </div>
 <slot></slot>
 
@@ -85,10 +85,10 @@
         display: flex;
         flex-direction: column;
         justify-content: start;
-        align-items: center;
+        align-items: end;
         opacity: 0;
         animation: fadeIn 0.5s ease forwards;
-        padding-top: 2rem;
+        padding: 1rem;
     }
 
     @keyframes fadeIn {
