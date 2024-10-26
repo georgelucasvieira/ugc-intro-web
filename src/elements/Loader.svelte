@@ -20,9 +20,11 @@
                             if (target){
                                 if (target instanceof HTMLIFrameElement){
                                     target.onload = function(){
-                                        observedChild.style.display = "block";
-                                        removeLoader();
-                                        observer.disconnect();
+                                        setTimeout(()=>{
+                                            observedChild.style.display = "block";
+                                            removeLoader();
+                                            observer.disconnect();
+                                        },1000)
                                     }
                                 }  
                             } else{
@@ -54,7 +56,7 @@
             observedChild = loader?.parentElement?.children[1] as HTMLElement;
 
             if (observedChild) {
-                // observedChild.style.display = "none";
+                observedChild.style.display = "none";
                 observer.observe(observedChild, {
                     childList: true,  
                     attributes: false,     

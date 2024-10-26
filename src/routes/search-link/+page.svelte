@@ -44,6 +44,19 @@
       currentMessageIndex += 1
     }
 
+    let twitterScriptLoaded = false;
+    function twitterWidgetScript(node:HTMLElement){
+      if (!twitterScriptLoaded) {
+        const script = document.createElement('script');
+        script.src = "https://platform.twitter.com/widgets.js";
+        script.async = true;
+        script.onload = () => {
+          twitterScriptLoaded = true;
+        };
+        node.appendChild(script);
+      } 
+    }
+
     onMount(() => {
       startAnimation = true;
     });
@@ -75,7 +88,7 @@
               <div id="post-0">
                 <Loader targetSelector="#twitter-widget-0" width="100%" height="850px">
                   <div class="twitter-container">
-                    <blockquote class="twitter-tweet"><p lang="hi" dir="ltr">प्रश्न:- <a href="https://twitter.com/hashtag/ModiKaun?src=hash&amp;ref_src=twsrc%5Etfw">#ModiKaun</a> है..? <br> संक्षेप में व्याख्या कीजिए <br><br>उत्तर :- वही मोदी जिसने - <br><br>• वही जिसके राज में कोविद में गंगा घाट पर लाशें का ढक गया था।<br>• वही जिसके राज में युवा 83 परसेंट बेरोजगार हुए।<br>• वही जिसने बलात्कारियों के लिए वोट मांगा। <br>• वही जिसने मणिपुर को नफ़रत… <a href="https://t.co/3XLEaUPjan">pic.twitter.com/3XLEaUPjan</a></p>&mdash; Shailendra Yadav (@ShailendraA2Y) <a href="https://twitter.com/ShailendraA2Y/status/1791087269732130924?ref_src=twsrc%5Etfw">May 16, 2024</a></blockquote> <script src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    <blockquote class="twitter-tweet" use:twitterWidgetScript><p lang="hi" dir="ltr">प्रश्न:- <a href="https://twitter.com/hashtag/ModiKaun?src=hash&amp;ref_src=twsrc%5Etfw">#ModiKaun</a> है..? <br> संक्षेप में व्याख्या कीजिए <br><br>उत्तर :- वही मोदी जिसने - <br><br>• वही जिसके राज में कोविद में गंगा घाट पर लाशें का ढक गया था।<br>• वही जिसके राज में युवा 83 परसेंट बेरोजगार हुए।<br>• वही जिसने बलात्कारियों के लिए वोट मांगा। <br>• वही जिसने मणिपुर को नफ़रत… <a href="https://t.co/3XLEaUPjan">pic.twitter.com/3XLEaUPjan</a></p>&mdash; Shailendra Yadav (@ShailendraA2Y) <a href="https://twitter.com/ShailendraA2Y/status/1791087269732130924?ref_src=twsrc%5Etfw">May 16, 2024</a></blockquote>
                   </div>
                 </Loader>
               </div>
