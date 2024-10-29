@@ -63,7 +63,7 @@
 <Navbar />
 <main>
     <section>
-        <h2><bold id="results">{results} results</bold> found ({assetsFound.toLocaleString()} assets found)</h2>
+        <h2><bold id="results">{results} results</bold> found ({assetsFound.toLocaleString()} assets analysed)</h2>
         <div id="loader">
             <Circle3 size="60" unit="px" duration="1.5s"/>
         </div>
